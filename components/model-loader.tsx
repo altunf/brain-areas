@@ -1,24 +1,15 @@
 import { Html, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
+import { useBrainRegion } from "@/context/brain-region-context";
 import gsap from "gsap";
 import { useMemo } from "react";
-
-interface ModelLoaderProps {
-  path: string;
-  scale: number;
-  position: [number, number, number];
-  onClick?: (event: any) => void;
-  buttonPosition?: [number, number, number] | null;
-}
-
-interface ButtonStyle {
-  padding: string;
-  backgroundColor: string;
-  color: string;
-  border: string;
-  borderRadius: string;
-  cursor: string;
-}
+import { ButtonStyle, Language, ModelLoaderProps } from "@/types/types";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import {
+  buttonPositions,
+  cameraOffsets,
+  regionDescriptions,
+} from "@/constants/brain-regions";
 
 export default function ModelLoader({
   path,
@@ -26,65 +17,93 @@ export default function ModelLoader({
   position,
   onClick,
 }: ModelLoaderProps) {
+  const { language, setLanguage, setSelectedRegion } = useBrainRegion();
   const { scene } = useGLTF(path);
   const { camera } = useThree();
-  const buttonPositions = useMemo(
-    () => ({
-      1: [0.04, 0.16, 0.5],
-      2: [0.54, 0.1, 0.4],
-      3: [0.37, 0.4, 0.61],
-      4: [0.25, 0.21, 0.53],
-      5: [0.2541528003589063, 0.05097716176770178, 0.5330323053032349],
-    }),
-    []
-  );
-  const cameraOffsets = useMemo(
-    () => ({
-      1: { x: 0, y: -0.1, z: 0.6 },
-      2: { x: 0.5, y: -0.4, z: 0.6 },
-      3: { x: 0.6, y: 0.6, z: 0.6 },
-      4: { x: 0, y: 0, z: 0.6 },
-      5: { x: -0.05, y: -0.2, z: 0.6 },
-    }),
-    []
-  );
-  const buttonStyle: ButtonStyle & { transition?: string, ':hover'?: any } = {
-    padding: "8px 16px",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    borderRadius: "50%",
-    color: "white",
-    border: "2px solid white",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
-    ':hover': {
-      backgroundColor: "rgba(255, 255, 255, 0.2)",
-      transform: "scale(1.1)",
-    }
+
+  const handleButtonClick = (position: number[], num: number) => {
+    const offset = cameraOffsets[num as keyof typeof cameraOffsets];
+    gsap.to(camera.position, {
+      x: position[0] + offset.x,
+      y: position[1] + offset.y,
+      z: position[2] + offset.z,
+      duration: 1,
+      ease: "power2.inOut",
+    });
+
+    // Map button numbers to brain region names
+    const regionNames: { [key: number]: string } = {
+      1: "Amygdala",
+      2: "Hippocampus",
+      3: "Anterior Cingulate Cortex",
+      4: "Hypothalamus",
+      5: "Pituitary Glad",
+    };
+
+    setSelectedRegion(regionNames[num] || "");
   };
+
   const renderButton = (num: number) => (
     <Html
       key={num}
-      position={buttonPositions[num as keyof typeof buttonPositions]}
+      position={buttonPositions[num as keyof typeof buttonPositions] as any}
     >
-      <button
-        onClick={() => {
-          console.log(`Button ${num} clicked`);
-          handleButtonClick(buttonPositions[num], num);
-        }}
-        style={buttonStyle}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-          e.currentTarget.style.transform = "scale(1.1)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-          e.currentTarget.style.transform = "scale(1)";
-        }}
-      >
-        {num}
-      </button>
+      <Popover>
+        <PopoverTrigger asChild>
+          <button
+            onClick={() => {
+              console.log(`Button ${num} clicked`);
+              handleButtonClick(
+                buttonPositions[num as keyof typeof buttonPositions],
+                num
+              );
+            }}
+            style={buttonStyle}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor =
+                "rgba(255, 255, 255, 0.2)";
+              e.currentTarget.style.transform = "scale(1.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+              e.currentTarget.style.transform = "scale(1)";
+            }}
+          >
+            {num}
+          </button>
+        </PopoverTrigger>
+        <PopoverContent className="w-80">
+          <div className="p-4">
+            <div className="flex justify-end mb-2">
+              <button
+                onClick={() =>
+                  setLanguage((lang: Language) => (lang === "tr" ? "en" : "tr"))
+                }
+                className="text-sm text-gray-500 hover:text-gray-700"
+              >
+                {language === "tr" ? "EN" : "TR"}
+              </button>
+            </div>
+            <h2 className="text-lg font-bold mb-2">
+              {
+                regionDescriptions[num as keyof typeof regionDescriptions][
+                  language
+                ].name
+              }
+            </h2>
+            <p className="text-sm text-gray-600">
+              {
+                regionDescriptions[num as keyof typeof regionDescriptions][
+                  language
+                ].description
+              }
+            </p>
+          </div>
+        </PopoverContent>
+      </Popover>
     </Html>
   );
+
   return (
     <group>
       <primitive
@@ -100,3 +119,17 @@ export default function ModelLoader({
     </group>
   );
 }
+
+const buttonStyle: ButtonStyle & { transition?: string; ":hover"?: any } = {
+  padding: "4px 12px",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  borderRadius: "50%",
+  color: "white",
+  border: "2px solid white",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
+  ":hover": {
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    transform: "scale(1.1)",
+  },
+};

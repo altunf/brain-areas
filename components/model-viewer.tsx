@@ -5,6 +5,7 @@ import { OrbitControls } from "@react-three/drei";
 import ModelLoader from "./model-loader";
 
 export default function ModelViewer() {
+
   return (
     <Canvas camera={{ position: [0, 1, 4], fov: 50 }}>
     <ambientLight intensity={2} color="#ffffff"   />
@@ -25,6 +26,8 @@ export default function ModelViewer() {
         }}
       />
       <OrbitControls />
+
+
     </Canvas>
   );
 }
