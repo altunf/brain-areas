@@ -41,8 +41,16 @@ const data = {
       isActive: true,
       items: [
         {
+          title: "Brain Lobs",
+          url: "/brain-lobs",
+        },
+        {
           title: "Limbic System",
           url: "/limbic-system",
+        },
+        {
+          title: "Neuron",
+          url: "/neuron",
         },
       ],
     },
