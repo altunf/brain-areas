@@ -10,6 +10,10 @@ export interface ModelLoaderProps {
 }
 
 export interface ButtonStyle {
+  weight: string;
+  height: string;
+  justifyContent: string;
+  alignItems: string;
   display:string;
   padding: string;
   backgroundColor: string;
