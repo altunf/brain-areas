@@ -7,7 +7,7 @@ import React from "react";
 
 export default function BrainLobsPage() {
   return (
-    <div className="w-screen h-screen bg-[#CEEFFD]">
+    <div className=" bg-[#CEEFFD] flex flex-1 flex-col gap-4 h-screen">
       <ModelViewer
         scale={0.0001}
         modelPath="brain_lobs"

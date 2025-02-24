@@ -7,7 +7,7 @@ import {
 
 export default function LimbicSystemPage() {
   return (
-    <div className="w-screen h-screen bg-[#CEEFFD] relative">
+    <div className=" bg-[#CEEFFD] flex flex-1 flex-col gap-4 h-screen">
       <ModelViewer
       scale={0.5}
         modelPath="limbic_system"
