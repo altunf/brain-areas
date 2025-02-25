@@ -1,13 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, Command, Inbox, LifeBuoy, Send } from "lucide-react";
 
 import { Label } from "@/components/ui/label";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
@@ -21,59 +19,13 @@ import {
 import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
 import { NavSecondary } from "./nav-secondary";
-
-// This is sample data
-const data = {
-  navMain: [
-    {
-      title: "Models",
-      url: "#",
-      icon: Command,
-      isActive: true,
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      isActive: false,
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
-    },
-  ],
-  models: [
-    {
-      href: "/brain-lobs",
-      name: "Brain Lobs",
-      desc: "Hi team, just a reminder about our meeting tomorrow at 10 AM.\nPlease come prepared with your project updates.",
-    },
-    {
-      href: "/limbic-system",
-      name: "Limbic System",
-      desc: "Thanks for the update. The progress looks great so far.\nLet's schedule a call to discuss the next steps.",
-    },
-    {
-      href: "/neuron",
-      name: "Neuron",
-      desc: "Hey everyone! I'm thinking of organizing a team outing this weekend.\nWould you be interested in a hiking trip or a beach day?",
-    },
-  ],
-};
+import { sidebarData } from "@/constants/sidebar-data";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   // Note: I'm using state to show active item.
   // IRL you should use the url/router.
-  const [activeItem, setActiveItem] = React.useState(data.navMain[0]);
-  const [models, setModels] = React.useState(data.models);
+  const [activeItem, setActiveItem] = React.useState(sidebarData.navMain[0]);
+  const [models, setModels] = React.useState(sidebarData.models);
   const { setOpen } = useSidebar();
 
   return (
@@ -116,7 +68,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarGroupContent className="px-1.5 md:px-0">
               <SidebarMenu>
                 <SidebarTrigger className=" alignSelf-center" />
-                {data.navMain.map((item) => (
+                {sidebarData.navMain.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       tooltip={{
@@ -125,7 +77,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       }}
                       onClick={() => {
                         setActiveItem(item);
-                        const model = data.models.sort(
+                        const model = sidebarData.models.sort(
                           () => Math.random() - 0.5
                         );
                         setModels(
@@ -147,7 +99,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
-          <NavSecondary items={data.navSecondary} className="mt-auto" />
+          <NavSecondary items={sidebarData.navSecondary} className="mt-auto" />
         </SidebarContent>
       </Sidebar>
 

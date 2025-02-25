@@ -18,8 +18,9 @@ export default function ModelViewer({
 }) {
   return (
     <Canvas camera={{ position: [0, 1, 4], fov: 50 }}>
-      <ambientLight intensity={2} color="#ffffff" />
-      <directionalLight color="#ffffff" position={[6, 5, 1]} intensity={8} />
+      <ambientLight color={"white"} intensity={1} />
+      <directionalLight color={"white"} position={[1, 5, 1]} intensity={8} />
+      
       <ModelLoader
         buttonPositions={buttonPositions}
         cameraOffsets={cameraOffsets}
@@ -27,10 +28,9 @@ export default function ModelViewer({
         path={modelPath}
         scale={scale}
         position={[0, 0, 0]}
-
         onClick={(event) => {
           console.log({
-            meshName: event.object.name,
+            meshName: event.object,
             clickPoint: event.point,
           });
         }}

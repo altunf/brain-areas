@@ -1,12 +1,13 @@
+import { ThreeEvent } from "@react-three/fiber";
+
 export interface ModelLoaderProps {
-  buttonPositions: [number, number, number][];
-  cameraOffsets: [number, number, number];
+  buttonPositions: any;
+  cameraOffsets: any;
+  buttons: number[];
   path: string;
   scale: number;
-  buttons: number[];
   position: [number, number, number];
-  onClick?: (event: any) => void;
-  buttonPosition?: [number, number, number] | null;
+  onClick?: (event: ThreeEvent<MouseEvent>) => void;
 }
 
 export interface ButtonStyle {

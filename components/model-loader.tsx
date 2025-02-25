@@ -4,6 +4,8 @@ import { useBrainRegion } from "@/context/brain-region-context";
 import gsap from "gsap";
 import { ModelLoaderProps } from "@/types/types";
 import { BrainRegionButton } from "./brain/BrainRegionButton";
+import { Suspense } from "react";
+
 
 export default function ModelLoader({
   buttonPositions,
@@ -15,7 +17,7 @@ export default function ModelLoader({
   onClick,
 }: ModelLoaderProps) {
   const { language, setLanguage, setSelectedRegion } = useBrainRegion();
-  const { scene } = useGLTF(`/models/${path}.glb`);
+  const { scene } = useGLTF(`/models/${path}.glb`, true);
   const { camera } = useThree();
 
   const handleButtonClick = (position: number[], num: number) => {
@@ -26,6 +28,9 @@ export default function ModelLoader({
       z: position[2] + offset.z,
       duration: 1,
       ease: "power2.inOut",
+      onUpdate: () => {
+        camera.updateProjectionMatrix();
+      },
     });
 
     const regionNames: { [key: number]: string } = {
@@ -40,27 +45,29 @@ export default function ModelLoader({
   };
 
   return (
-    <group>
-      <primitive
-        rotation={path === "brain_lobs" ? [0, Math.PI / 2, 0] : [0, 0, 0]}
-        object={scene}
-        scale={scale}
-        position={position}
-        onClick={(event: any) => {
-          event.stopPropagation();
-          onClick?.(event);
-        }}
-      />
-      {buttons?.map((num) => (
-        <BrainRegionButton
-          key={num}
-          num={num}
-          language={language}
-          setLanguage={setLanguage}
-          buttonPositions={buttonPositions}
-          onButtonClick={handleButtonClick}
+    <Suspense fallback={<div>Loading...</div>}>
+      <group>
+        <primitive
+          rotation={path === "brain_lobs" ? [0, Math.PI / 2, 0] : [0, 0, 0]}
+          object={scene}
+          scale={scale}
+          position={position}
+       /*    onClick={(event: any) => {
+            event.stopPropagation();
+            onClick?.(event);
+          }} */
         />
-      ))}
-    </group>
+        {buttons?.map((num) => (
+          <BrainRegionButton
+            key={num}
+            num={num}
+            language={language}
+            setLanguage={setLanguage}
+            buttonPositions={buttonPositions}
+            onButtonClick={handleButtonClick}
+          />
+        ))}
+      </group>
+    </Suspense>
   );
 }
