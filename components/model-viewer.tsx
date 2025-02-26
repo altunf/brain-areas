@@ -35,6 +35,7 @@ export default function ModelViewer({
           });
         }}
       />
+       <directionalLight color={"white"} position={[-1, -1, 1]} intensity={8} />
       <OrbitControls />
     </Canvas>
   );
