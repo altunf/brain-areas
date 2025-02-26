@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server'; // Correct import
 import { BrainRegionProvider } from "@/context/brain-region-context";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
@@ -34,6 +34,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // Enable static rendering by setting the request locale
   setRequestLocale(locale);
 
   let messages;
