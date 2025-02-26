@@ -39,8 +39,6 @@ export type ModelType = 'limbicSystem' | 'neuron' | 'cerebralArteries';
 export type BrainRegionContextType = {
   selectedRegion: string;
   setSelectedRegion: (region: string) => void;
-  modelType: ModelType;
-  changeModel: (type: ModelType) => void;
   language: string;
   getTranslation: (key: string) => string;
 };
@@ -50,5 +48,4 @@ export interface BrainRegionButtonProps {
   num: number;
   onButtonClick: (position: number[], num: number) => void;
   modelType: string;
-  language: 'en' | 'tr'; // Add this line
 }

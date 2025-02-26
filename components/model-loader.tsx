@@ -15,7 +15,7 @@ export default function ModelLoader({
   scale,
   position,
 }: ModelLoaderProps) {
-  const { setSelectedRegion, modelType } = useBrainRegion();
+  const { setSelectedRegion } = useBrainRegion();
   const { scene } = useGLTF(`/models/${path}.glb`, true);
   const { camera } = useThree();
 
@@ -41,7 +41,7 @@ export default function ModelLoader({
   const currentModelType = getModelTypeFromPath(path);
 
   const handleButtonClick = (position: number[], num: number) => {
-    const offset: any = cameraOffsets[num]; // add type annotation here
+    const offset: any = cameraOffsets[num];
     gsap.to(camera.position, {
       x: position[0] + offset.x,
       y: position[1] + offset.y,
@@ -55,7 +55,8 @@ export default function ModelLoader({
 
     const regionNames =
       MODEL_REGIONS[currentModelType as keyof typeof MODEL_REGIONS];
-    setSelectedRegion(regionNames[num] || "");
+    // Type assertion to allow numeric indexing
+    setSelectedRegion(regionNames[num as keyof typeof regionNames] || "");
   };
 
   return (
