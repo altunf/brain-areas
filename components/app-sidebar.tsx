@@ -116,7 +116,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {activeItem.title}
             </div>
             <Label className="flex items-center gap-2 text-sm">
-              <span>{locale === 'en' ? 'Turkish' : 'English'}</span>
+              <span>{locale === 'en' ? 'English Active' : 'Turkçe Aktif'}</span>
               <Switch 
                 className="shadow-none" 
                 checked={locale === 'tr'}
