@@ -1,4 +1,4 @@
-import { ThreeEvent } from "@react-three/fiber";
+
 
 export interface ModelLoaderProps {
   buttonPositions: any;

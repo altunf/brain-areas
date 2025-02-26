@@ -28,12 +28,6 @@ export default function ModelViewer({
         path={modelPath}
         scale={scale}
         position={[0, 0, 0]}
-        onClick={(event) => {
-          console.log({
-            meshName: event.object,
-            clickPoint: event.point,
-          });
-        }}
       />
        <directionalLight color={"white"} position={[-1, -1, 1]} intensity={8} />
       <OrbitControls />
