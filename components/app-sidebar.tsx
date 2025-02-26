@@ -20,13 +20,13 @@ import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
 import { NavSecondary } from "./nav-secondary";
 import { sidebarData } from "@/constants/sidebar-data";
+import { useBrainRegion } from "@/context/brain-region-context";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  // Note: I'm using state to show active item.
-  // IRL you should use the url/router.
   const [activeItem, setActiveItem] = React.useState(sidebarData.navMain[0]);
   const [models, setModels] = React.useState(sidebarData.models);
   const { setOpen } = useSidebar();
+  const { changeModel } = useBrainRegion();
 
   return (
     <Sidebar
@@ -34,9 +34,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       className="overflow-hidden [&>[data-sidebar=sidebar]]:flex-row"
       {...props}
     >
-      {/* This is the first sidebar */}
-      {/* We disable collapsible and adjust width to icon. */}
-      {/* This will make the sidebar appear as icons. */}
+  
       <Sidebar
         collapsible="none"
         className="!w-[calc(var(--sidebar-width-icon)_+_1px)] border-r"
@@ -124,12 +122,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <a
                   href={model.href}
                   key={model.name}
+                  onClick={() => {
+                    changeModel(model.modelType);
+                  }}
                   className="flex flex-col items-start gap-2 whitespace-nowrap border-b p-4 text-sm leading-tight last:border-b-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                 >
                   <span className="font-medium">{model.name}</span>
-                  {/*  <span className="line-clamp-2 w-[260px] whitespace-break-spaces text-xs">
+                   <span className="line-clamp-2 w-[260px] whitespace-break-spaces text-xs">
                     {model.desc}
-                  </span> */}
+                  </span> 
                 </a>
               ))}
             </SidebarGroupContent>

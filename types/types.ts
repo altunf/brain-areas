@@ -7,7 +7,7 @@ export interface ModelLoaderProps {
   path: string;
   scale: number;
   position: [number, number, number];
-  onClick?: (event: ThreeEvent<MouseEvent>) => void;
+//  onClick?: (event: ThreeEvent<MouseEvent>) => void;
 }
 
 export interface ButtonStyle {
@@ -34,11 +34,14 @@ export type Translations = {
   };
 };
 
+export type ModelType = 'limbicSystem' | 'neuron' | 'cerebralArteries';
+
 export type BrainRegionContextType = {
   selectedRegion: string;
   setSelectedRegion: (region: string) => void;
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  modelType: ModelType;
+  changeModel: (type: ModelType) => void;
+  language: string;
   getTranslation: (key: string) => string;
 };
 

@@ -7,7 +7,6 @@ export function BrainRegionButton({
   buttonPositions,
   num,
   language,
-  setLanguage,
   onButtonClick,
 }: BrainRegionButtonProps) {
   return (
@@ -41,14 +40,6 @@ export function BrainRegionButton({
         </PopoverTrigger>
         <PopoverContent className="w-80">
           <div className="p-4">
-            <div className="flex justify-end mb-2">
-              <button
-                onClick={() => setLanguage(language === "tr" ? "en" : "tr")}
-                className="text-sm text-gray-500 hover:text-gray-700"
-              >
-                {language === "tr" ? "EN" : "TR"}
-              </button>
-            </div>
             <h2 className="text-lg font-bold mb-2">
               {limbicSystemRegionDesc[num as keyof typeof limbicSystemRegionDesc]?.[
                 language

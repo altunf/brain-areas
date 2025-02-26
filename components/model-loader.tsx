@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ModelLoaderProps } from "@/types/types";
 import { BrainRegionButton } from "./brain/BrainRegionButton";
 import { Suspense } from "react";
+import { MODEL_REGIONS } from "@/constants/model-regions";
 
 
 export default function ModelLoader({
@@ -14,9 +15,8 @@ export default function ModelLoader({
   path,
   scale,
   position,
-  onClick,
 }: ModelLoaderProps) {
-  const { language, setLanguage, setSelectedRegion } = useBrainRegion();
+  const { language, setSelectedRegion, modelType } = useBrainRegion();
   const { scene } = useGLTF(`/models/${path}.glb`, true);
   const { camera } = useThree();
 
@@ -33,14 +33,7 @@ export default function ModelLoader({
       },
     });
 
-    const regionNames: { [key: number]: string } = {
-      1: "Amygdala",
-      2: "Hippocampus",
-      3: "Anterior Cingulate Cortex",
-      4: "Hypothalamus",
-      5: "Pituitary Glad",
-    };
-
+    const regionNames = MODEL_REGIONS[modelType as keyof typeof MODEL_REGIONS];
     setSelectedRegion(regionNames[num] || "");
   };
 
@@ -62,7 +55,6 @@ export default function ModelLoader({
             key={num}
             num={num}
             language={language}
-            setLanguage={setLanguage}
             buttonPositions={buttonPositions}
             onButtonClick={handleButtonClick}
           />

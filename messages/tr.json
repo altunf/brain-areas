@@ -1,0 +1,18 @@
+{
+  "intro": {
+    "title": "Brainteract: Beyni ve Sinir Sistemini Keşfetmenin Yeni Yolu",
+    "description1": "Brainteract, beyin ve sinir sistemini daha iyi anlamak için geliştirilen interaktif bir 3D platformdur. Gerçekçi modeller ve açıklamalar sayesinde teorik bilgileri görselleştirerek daha anlaşılır hale getirmeyi amaçlamaktadır. Brainteract ile beyin loblarını, nöronları ve sinir ağlarını detaylı bir şekilde inceleyebilir, her bir bölgeye tıklayarak ilgili bilimsel bilgilere ulaşabilirsiniz.",
+    "description2": "Bu platform, sinirbilime ilgi duyan öğrenciler, araştırmacılar ve meraklılar için faydalı bir kaynak olabilir. Beynin işleyişini keşfetmek, nöronların nasıl iletişim kurduğunu anlamak ve sinir sisteminin yapısını daha yakından incelemek için Brainteract ile etkileşime geçebilirsiniz. Hem öğrenmeye hem de keşfetmeye açık bir ortam sunarak sinirbilimin karmaşıklığını daha erişilebilir hale getirmeyi hedefliyoruz.",
+    "developer": "Brainteract, psikolog Fırat Altun tarafından geliştirilmiştir.",
+    "development": "Bu proje halen geliştirilmektedir. Bu nedenle bazı hatalarla karşılaşabilirsiniz. Geri bildirimleriniz bizim için değerlidir!",
+    "switchLanguage": "Switch to English"
+  },
+  "limbicSystem": {
+    "selectAnnotation": "Bir bölge seçin",
+    "amygdala": "Amigdala",
+    "hippocampus": "Hipokampüs",
+    "anteriorCingulateCortex": "Anterior Singulat Korteks",
+    "hypothalamus": "Hipotalamus",
+    "pituitaryGlad": "Hipofiz Bezi"
+  }
+}

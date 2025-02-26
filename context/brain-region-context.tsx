@@ -1,53 +1,35 @@
 "use client";
-import { BrainRegionContextType, Language, Translations } from "@/types/types";
+import { BrainRegionContextType } from "@/types/types";
 import { createContext, useContext, useState, ReactNode } from "react";
-
-
-const translations: Translations = {
-  "Select an annotation": {
-    tr: "Bir bölge seçin",
-    en: "Select an annotation"
-  },
-  "Amygdala": {
-    tr: "Amigdala",
-    en: "Amygdala"
-  },
-  "Hippocampus": {
-    tr: "Hipokampüs",
-    en: "Hippocampus"
-  },
-  "Anterior Cingulate Cortex": {
-    tr: "Anterior Singulat Korteks",
-    en: "Anterior Cingulate Cortex"
-  },
-  "Hypothalamus": {
-    tr: "Hipotalamus",
-    en: "Hypothalamus"
-  },
-  "Pituitary Glad": {
-    tr: "Hipofiz Bezi",
-    en: "Pituitary Glad"
-  }
-};
-
+import { useTranslations, useLocale } from 'next-intl';
 
 const BrainRegionContext = createContext<BrainRegionContextType | undefined>(undefined);
 
+export type ModelType = 'limbicSystem' | 'neuron' | 'cerebralArteries';
+
 export function BrainRegionProvider({ children }: { children: ReactNode }) {
-  const [selectedRegion, setSelectedRegion] = useState<string>("Select an annotation");
-  const [language, setLanguage] = useState<Language>("en");
+  const [selectedRegion, setSelectedRegion] = useState<string>("selectAnnotation");
+  const [modelType, setModelType] = useState<ModelType>("limbicSystem");
+  const t = useTranslations(modelType);
+  const locale = useLocale();
 
   const getTranslation = (key: string) => {
-    return translations[key]?.[language] || key;
+    return t(key);
+  };
+
+  const changeModel = (newModel: ModelType) => {
+    setModelType(newModel);
+    setSelectedRegion("selectAnnotation"); // Reset selection when model changes
   };
 
   return (
     <BrainRegionContext.Provider 
       value={{ 
         selectedRegion, 
-        setSelectedRegion, 
-        language, 
-        setLanguage,
+        setSelectedRegion,
+        modelType,
+        changeModel, 
+        language: locale,
         getTranslation 
       }}
     >
