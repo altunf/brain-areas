@@ -20,8 +20,18 @@ import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
 import { NavSecondary } from "./nav-secondary";
 import { sidebarData } from "@/constants/sidebar-data";
+import { useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const router = useRouter();
+  const locale = useLocale();
+  
+  const toggleLanguage = () => {
+    const newLocale = locale === 'en' ? 'tr' : 'en';
+    router.push(`/${newLocale}`);  // replace yerine push kullanıyoruz
+  };
+
   const [activeItem, setActiveItem] = React.useState(sidebarData.navMain[0]);
   const [models, setModels] = React.useState(sidebarData.models);
   const { setOpen } = useSidebar();
@@ -40,7 +50,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild className="md:h-8 md:p-0">
-                <a href="#">
+                <a href="/">
                   <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                     <Image
                       height={30}
@@ -106,8 +116,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {activeItem.title}
             </div>
             <Label className="flex items-center gap-2 text-sm">
-              <span>Dark Mode</span>
-              <Switch className="shadow-none" />
+              <span>{locale === 'en' ? 'Turkish' : 'English'}</span>
+              <Switch 
+                className="shadow-none" 
+                checked={locale === 'tr'}
+                onCheckedChange={toggleLanguage}
+              />
             </Label>
           </div>
           <SidebarInput placeholder="Type to search..." />

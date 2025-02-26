@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";  // Updated path to point to the parent directory
+import "../globals.css";  
 import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 
@@ -24,15 +24,15 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export function generateStaticParams() {
-  return [{locale: 'en'}, {locale: 'tr'}];
+  return [{ locale: 'en' }, { locale: 'tr' }];
 }
 
 export default async function RootLayout({
   children,
-  params: {locale}
+  params: { locale }
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }) {
   let messages;
   try {
@@ -42,7 +42,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <BrainRegionProvider>
@@ -56,7 +56,7 @@ export default async function RootLayout({
               <AppSidebar />
               <SidebarInset>
                 <main>
-                {children}
+                  {children}
                 </main>
               </SidebarInset>
             </SidebarProvider>
