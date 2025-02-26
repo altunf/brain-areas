@@ -1,4 +1,3 @@
-import BottomBar from "@/components/bottom-bar";
 import ModelViewer from "@/components/model-viewer";
 import { visualPathwayButtonPositions, visualPathwayCameraOffsets } from "@/constants/brain-regions";
 
@@ -12,7 +11,6 @@ export default function CerebralArteriesPage() {
           cameraOffsets={visualPathwayCameraOffsets}
           buttonPositions={visualPathwayButtonPositions}
         />
-        <BottomBar />
       </div>
     );
   }

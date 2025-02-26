@@ -1,5 +1,4 @@
 import ModelViewer from "@/components/model-viewer";
-import BottomBar from "@/components/bottom-bar";
 import {
   limbicSystemButtonPositions,
   limbicSystemCameraOffsets,
@@ -15,7 +14,6 @@ export default function NerveCrossSectionPage() {
         cameraOffsets={limbicSystemCameraOffsets}
         buttonPositions={limbicSystemButtonPositions}
       />
-      <BottomBar />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import ModelViewer from "@/components/model-viewer";
-import BottomBar from "@/components/bottom-bar";
 import {
   limbicSystemButtonPositions,
   limbicSystemCameraOffsets,
@@ -15,7 +14,7 @@ export default function BroadmannAreasPage() {
         cameraOffsets={limbicSystemCameraOffsets}
         buttonPositions={limbicSystemButtonPositions}
       />
-      <BottomBar />
+  
     </div>
   );
 }

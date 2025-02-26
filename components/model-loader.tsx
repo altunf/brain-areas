@@ -7,7 +7,6 @@ import { BrainRegionButton } from "./brain/BrainRegionButton";
 import { Suspense } from "react";
 import { MODEL_REGIONS } from "@/constants/model-regions";
 
-
 export default function ModelLoader({
   buttonPositions,
   cameraOffsets,
@@ -16,9 +15,30 @@ export default function ModelLoader({
   scale,
   position,
 }: ModelLoaderProps) {
-  const { language, setSelectedRegion, modelType } = useBrainRegion();
+  const { setSelectedRegion, modelType } = useBrainRegion();
   const { scene } = useGLTF(`/models/${path}.glb`, true);
   const { camera } = useThree();
+
+  const getModelTypeFromPath = (path: string) => {
+    switch (path) {
+      case "brain_lobs":
+        return "brainLobs";
+      case "limbic_system":
+        return "limbicSystem";
+      case "neuron":
+        return "neuron";
+      case "visual_pathway":
+        return "visualPathway";
+      case "cerebral_arteries":
+        return "cerebralArteries";
+      case "ventricular_system":
+        return "ventricularSystem";
+      default:
+        return "limbicSystem";
+    }
+  };
+
+  const currentModelType = getModelTypeFromPath(path);
 
   const handleButtonClick = (position: number[], num: number) => {
     const offset: any = cameraOffsets[num]; // add type annotation here
@@ -33,7 +53,8 @@ export default function ModelLoader({
       },
     });
 
-    const regionNames = MODEL_REGIONS[modelType as keyof typeof MODEL_REGIONS];
+    const regionNames =
+      MODEL_REGIONS[currentModelType as keyof typeof MODEL_REGIONS];
     setSelectedRegion(regionNames[num] || "");
   };
 
@@ -45,7 +66,7 @@ export default function ModelLoader({
           object={scene}
           scale={scale}
           position={position}
-       /*    onClick={(event: any) => {
+          /*    onClick={(event: any) => {
             event.stopPropagation();
             onClick?.(event);
           }} */
@@ -54,9 +75,9 @@ export default function ModelLoader({
           <BrainRegionButton
             key={num}
             num={num}
-            language={language}
             buttonPositions={buttonPositions}
             onButtonClick={handleButtonClick}
+            modelType={currentModelType}
           />
         ))}
       </group>

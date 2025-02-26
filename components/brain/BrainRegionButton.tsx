@@ -1,28 +1,45 @@
+"use client";
+
 import { Html } from "@react-three/drei";
 import { BrainRegionButtonProps, ButtonStyle } from "@/types/types";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import { limbicSystemRegionDesc } from "@/constants/brain-regions";
+import { useTranslations } from "next-intl";
+import React from "react";
 
 export function BrainRegionButton({
   buttonPositions,
   num,
-  language,
   onButtonClick,
+  modelType,
 }: BrainRegionButtonProps) {
+  const t = useTranslations();
+
+  const getRegionInfo = () => {
+    try {
+      const regionKey = `${modelType}RegionDesc.${num}`;
+      console.log("Trying to get translation for:", regionKey);
+      return {
+        name: t(regionKey + ".name"),
+        description: t(regionKey + ".description"),
+      };
+    } catch (error) {
+      console.error("Translation error:", error);
+      return {
+        name: `Region ${num}`,
+        description: "Description not available",
+      };
+    }
+  };
+
+  const { name, description } = getRegionInfo();
+
   return (
-    <Html
-      key={num}
-      position={buttonPositions[num]}
-    >
+    <Html key={num} position={buttonPositions[num]}>
       <Popover>
         <PopoverTrigger asChild>
           <button
             onClick={() => {
-              console.log(`Button ${num} clicked`);
-              onButtonClick(
-                [...buttonPositions[num]],
-                num
-              );
+              onButtonClick([...buttonPositions[num]], num);
             }}
             style={buttonStyle}
             onMouseEnter={(e) => {
@@ -40,16 +57,8 @@ export function BrainRegionButton({
         </PopoverTrigger>
         <PopoverContent className="w-80">
           <div className="p-4">
-            <h2 className="text-lg font-bold mb-2">
-              {limbicSystemRegionDesc[num as keyof typeof limbicSystemRegionDesc]?.[
-                language
-              ]?.name || `Region ${num}`}
-            </h2>
-            <p className="text-sm text-gray-600">
-              {limbicSystemRegionDesc[num as keyof typeof limbicSystemRegionDesc]?.[
-                language
-              ]?.description || "Description not available"}
-            </p>
+            <h2 className="text-lg font-bold mb-2">{name}</h2>
+            <p className="text-sm text-gray-600">{description}</p>
           </div>
         </PopoverContent>
       </Popover>

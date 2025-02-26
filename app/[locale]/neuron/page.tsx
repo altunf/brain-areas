@@ -1,5 +1,4 @@
 import ModelViewer from "@/components/model-viewer";
-import BottomBar from "@/components/bottom-bar";
 import {
   neuronButtonPositions,
   neuronCameraOffsets,
@@ -15,7 +14,6 @@ export default function NeuronPage() {
         cameraOffsets={neuronCameraOffsets}
         buttonPositions={neuronButtonPositions}
       />
-      <BottomBar />
     </div>
   );
 }

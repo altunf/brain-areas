@@ -8,11 +8,215 @@
     "switchLanguage": "Türkçeye Geç"
   },
   "limbicSystem": {
-    "selectAnnotation": "Select an annotation",
-    "amygdala": "Amygdala",
-    "hippocampus": "Hippocampus",
-    "anteriorCingulateCortex": "Anterior Cingulate Cortex",
-    "hypothalamus": "Hypothalamus",
-    "pituitaryGlad": "Pituitary Glad"
+    "Select an annotation": "Select an annotation",
+    "Amygdala": "Amygdala",
+    "Hippocampus": "Hippocampus",
+    "Anterior Cingulate Cortex": "Anterior Cingulate Cortex",
+    "Hypothalamus": "Hypothalamus",
+    "Pituitary Glad": "Pituitary Gland"
+  },
+  "brainLobs": {
+    "Select an annotation": "Select an annotation",
+    "Corpus Callosum": "Corpus Callosum",
+    "Frontal Lobe": "Frontal Lobe",
+    "Parietal Lobe": "Parietal Lobe",
+    "Temporal Lobe": "Temporal Lobe",
+    "Occipital Lobe": "Occipital Lobe",
+    "Central Sulcus": "Central Sulcus",
+    "Lateral Sulcus": "Lateral Sulcus",
+    "Parieto-Occipital Sulcus": "Parieto-Occipital Sulcus",
+    "Callosal Sulcus": "Callosal Sulcus",
+    "Cingulate Sulcus": "Cingulate Sulcus"
+  },
+
+  "selectAnnotation": "Select an annotation",
+  "neuron": {
+    "Select an annotation": "Select an annotation",
+    "Axon Terminal": "Axon Terminal",
+    "Node of Ranvier": "Node of Ranvier",
+    "Schwann Cell": "Schwann Cell",
+    "Myelin Sheath": "Myelin Sheath",
+    "Axon": "Axon",
+    "Soma": "Soma",
+    "Dendrites": "Dendrites",
+    "Nucleus": "Nucleus"
+  },
+  "visualPathway": {
+    "Select an annotation": "Select an annotation",
+    "Visual Field": "Visual Field",
+    "Retina": "Retina",
+    "Optic Nerve": "Optic Nerve",
+    "Optic Chiasma": "Optic Chiasma",
+    "Optic Tract": "Optic Tract",
+    "Lateral Geniculate Nucleus": "Lateral Geniculate Nucleus",
+    "Optic Radiation": "Optic Radiation",
+    "Occipital Lobe": "Occipital Lobe"
+  },
+  "cerebralArteries": {
+    "Select an annotation": "Select an annotation",
+    "anteriorCerebralArtery": "Anterior Cerebral Artery",
+    "middleCerebralArtery": "Middle Cerebral Artery",
+    "posteriorCerebralArtery": "Posterior Cerebral Artery",
+    "circleOfWillis": "Circle of Willis",
+    "basilarArtery": "Basilar Artery"
+  },
+
+  "limbicSystemRegionDesc": {
+    "1": {
+      "name": "Amygdala",
+      "description": "Processes emotions, particularly fear and anxiety. It's crucial for emotional learning and memory formation."
+    },
+    "2": {
+      "name": "Hippocampus",
+      "description": "Essential for learning and memory formation, especially long-term memory and spatial navigation."
+    },
+    "3": {
+      "name": "Anterior Cingulate Cortex",
+      "description": "Involved in emotion regulation, decision-making, impulse control, and error detection."
+    },
+    "4": {
+      "name": "Hypothalamus",
+      "description": "Regulates basic functions including hunger, thirst, body temperature, and circadian rhythms."
+    },
+
+    "5": {
+      "name": "Pituitary Gland",
+      "description": "The master endocrine gland that produces hormones affecting growth, metabolism, and stress response."
+    }
+  },
+  "brainLobsRegionDesc": {
+    "1": {
+      "name": "Corpus Callosum",
+      "description": "A thick band of nerve fibers that connects the two hemispheres of the brain, allowing them to communicate."
+    },
+    "2": {
+      "name": "Frontal Lobe",
+      "description": "Responsible for executive functions, including planning, decision-making, problem-solving, and motor control."
+    },
+    "3": {
+      "name": "Parietal Lobe",
+      "description": "Processes sensory information and is involved in spatial awareness, navigation, and attention."
+    },
+    "4": {
+      "name": "Temporal Lobe",
+      "description": "Involved in processing auditory information, memory formation, and language comprehension."
+    },
+    "5": {
+      "name": "Occipital Lobe",
+      "description": "The visual processing center of the brain, responsible for interpreting visual information."
+    },
+    "6": {
+      "name": "Central Sulcus",
+      "description": "A major groove that separates the frontal and parietal lobes, dividing motor and sensory areas."
+    },
+    "7": {
+      "name": "Lateral Sulcus",
+      "description": "Also known as the Sylvian fissure, separates the temporal lobe from the frontal and parietal lobes."
+    },
+    "8": {
+      "name": "Parieto-Occipital Sulcus",
+      "description": "A groove that marks the boundary between the parietal and occipital lobes."
+    },
+    "9": {
+      "name": "Callosal Sulcus",
+      "description": "A groove that runs along the corpus callosum, separating it from the cingulate gyrus."
+    },
+    "10": {
+      "name": "Cingulate Sulcus",
+      "description": "A groove that runs along the cingulate gyrus, part of the limbic system."
+    }
+  },
+
+  "neuronRegionDesc": {
+    "1": {
+      "name": "Axon Terminal",
+      "description": "The end of the axon where neurotransmitters are released to communicate with other neurons."
+    },
+    "2": {
+      "name": "Node of Ranvier",
+      "description": "Gaps in the myelin sheath that allow for saltatory conduction of nerve impulses."
+    },
+    "3": {
+      "name": "Schwann Cell",
+      "description": "Glial cells that produce the myelin sheath in the peripheral nervous system."
+    },
+    "4": {
+      "name": "Myelin Sheath",
+      "description": "A fatty insulating layer that speeds up nerve signal transmission along axons."
+    },
+    "5": {
+      "name": "Axon",
+      "description": "A long projection that conducts electrical impulses away from the neuron cell body."
+    },
+    "6": {
+      "name": "Soma",
+      "description": "The cell body of the neuron containing the nucleus and other vital organelles."
+    },
+    "7": {
+      "name": "Dendrites",
+      "description": "Branch-like extensions that receive signals from other neurons."
+    },
+    "8": {
+      "name": "Nucleus",
+      "description": "Contains the cell's genetic material and controls cellular activities."
+    }
+  },
+
+  "visualPathwayRegionDesc": {
+    "1": {
+      "name": "Visual Field",
+      "description": "The entire area that can be seen when the eyes are focused on a single point."
+    },
+    "2": {
+      "name": "Retina",
+      "description": "Light-sensitive layer at the back of the eye that converts light into neural signals."
+    },
+    "3": {
+      "name": "Optic Nerve",
+      "description": "Carries visual information from the retina to the brain."
+    },
+    "4": {
+      "name": "Optic Chiasma",
+      "description": "The point where the optic nerves partially cross, enabling integrated vision from both eyes."
+    },
+    "5": {
+      "name": "Optic Tract",
+      "description": "Neural pathway that carries visual information from the optic chiasm to the lateral geniculate nucleus."
+    },
+    "6": {
+      "name": "Lateral Geniculate Nucleus",
+      "description": "A relay center in the thalamus for visual information processing."
+    },
+    "7": {
+      "name": "Optic Radiation",
+      "description": "Neural fibers carrying visual information from the LGN to the visual cortex."
+    },
+    "8": {
+      "name": "Occipital Lobe",
+      "description": "Contains the primary visual cortex and processes visual information."
+    }
+  },
+
+  "cerebralArteriesRegionDesc": {
+    "1": {
+      "name": "Anterior Cerebral Artery",
+      "description": "Supplies blood to the frontal and medial parts of the cerebral hemispheres."
+    },
+    "2": {
+      "name": "Middle Cerebral Artery",
+      "description": "The largest cerebral artery, supplying blood to lateral areas of the frontal, parietal, and temporal lobes."
+    },
+    "3": {
+      "name": "Posterior Cerebral Artery",
+      "description": "Supplies blood to the occipital lobe and parts of the temporal lobe."
+    },
+    "4": {
+      "name": "Circle of Willis",
+      "description": "A circular arrangement of arteries that provides backup circulation to the brain."
+    },
+    "5": {
+      "name": "Basilar Artery",
+      "description": "Formed by the union of vertebral arteries, supplies blood to the brainstem and posterior brain."
+    }
   }
 }

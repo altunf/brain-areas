@@ -1,4 +1,4 @@
-import BottomBar from "@/components/bottom-bar";
+
 import ModelViewer from "@/components/model-viewer";
 import {
   visualPathwayButtonPositions,
@@ -15,7 +15,6 @@ export default function VisualPathwayPage() {
         cameraOffsets={visualPathwayCameraOffsets}
         buttonPositions={visualPathwayButtonPositions}
       />
-      <BottomBar />
     </div>
   );
 }

@@ -53,22 +53,17 @@ export const sidebarData = {
         desc: "Understand how visual information travels through the brain.",
       },
       {
-        href: "/brodmann-areas",
-        name: "Broadmann Areas",
-        modelType: "brodmannAreas", 
-        desc: "Explore the functional areas of the cerebral cortex.",
-      },
-      {
-        href: "/ventricular-system",
-        name: "Ventricular System",
-        modelType: "ventricularSystem",
-        desc: "Learn about the fluid-filled cavities in the brain.",
-      },
-      {
         href: "/cerebral-arteries",
         name: "Cerebral Arteries",
         modelType: "cerebralArteries",
         desc: "Discover the blood supply system of the brain.",
+      },
+
+    /*   {
+        href: "/ventricular-system",
+        name: "Ventricular System",
+        modelType: "ventricularSystem",
+        desc: "Learn about the fluid-filled cavities in the brain.",
       },
       {
         href: "/nerve-cross-section",
@@ -82,6 +77,12 @@ export const sidebarData = {
         modelType: "cranialNerveNuclei",
         desc: "Learn about the origins of cranial nerves.",
       },
+      {
+        href: "/brodmann-areas",
+        name: "Broadmann Areas",
+        modelType: "brodmannAreas", 
+        desc: "Explore the functional areas of the cerebral cortex.",
+      }, */
       {
         href: "/phineas-gage",
         name: "Skull of Phineas Gage",

@@ -14,5 +14,208 @@
     "anteriorCingulateCortex": "Anterior Singulat Korteks",
     "hypothalamus": "Hipotalamus",
     "pituitaryGlad": "Hipofiz Bezi"
+  },
+  "brainLobs": {
+    "selectAnnotation": "Bir bölge seçin",
+    "corpusCallosum": "Korpus Kallozum",
+    "frontalLobe": "Frontal Lob",
+    "parietalLobe": "Parietal Lob",
+    "temporalLobe": "Temporal Lob",
+    "occipitalLobe": "Oksipital Lob",
+    "centralSulcus": "Santral Sulkus",
+    "lateralSulcus": "Lateral Sulkus",
+    "parietoOccipitalSulcus": "Parieto-Oksipital Sulkus",
+    "callosalSulcus": "Kallozal Sulkus",
+    "cingulateSulcus": "Singulat Sulkus"
+  },
+  "neuron": {
+    "selectAnnotation": "Bir bölge seçin",
+    "axonTerminal": "Akson Terminali",
+    "nodeOfRanvier": "Ranvier Boğumu",
+    "schwannCell": "Schwann Hücresi",
+    "myelinSheath": "Miyelin Kılıf",
+    "axon": "Akson",
+    "soma": "Soma",
+    "dendrites": "Dendritler",
+    "nucleus": "Çekirdek"
+  },
+  "visualPathway": {
+    "selectAnnotation": "Bir bölge seçin",
+    "visualField": "Görme Alanı",
+    "retina": "Retina",
+    "opticNerve": "Optik Sinir",
+    "opticChiasma": "Optik Kiazma",
+    "opticTract": "Optik Trakt",
+    "lateralGeniculateNucleus": "Lateral Genikulat Çekirdek",
+    "opticRadiation": "Optik Radyasyon",
+    "occipitalLobe": "Oksipital Lob"
+  },
+  "cerebralArteries": {
+    "selectAnnotation": "Bir bölge seçin",
+    "anteriorCerebralArtery": "Anterior Serebral Arter",
+    "middleCerebralArtery": "Orta Serebral Arter",
+    "posteriorCerebralArtery": "Posterior Serebral Arter",
+    "circleOfWillis": "Willis Halkası",
+    "basilarArtery": "Baziler Arter"
+  },
+
+  
+  "limbicSystemRegionDesc": {
+    "1": {
+      "name": "Amigdala",
+      "description": "Korku ve kaygı başta olmak üzere duyguları işler. Duygusal öğrenme ve hafıza oluşumunda çok önemlidir."
+    },
+    "2": {
+      "name": "Hipokampüs",
+      "description": "Öğrenme ve hafıza oluşumu, özellikle uzun süreli hafıza ve uzamsal navigasyon için gereklidir."
+    },
+    "3": {
+      "name": "Anterior Singulat Korteks",
+      "description": "Duygu düzenleme, karar verme, dürtü kontrolü ve hata tespitinde rol oynar."
+    },
+    "4": {
+      "name": "Hipotalamus",
+      "description": "Açlık, susuzluk, vücut ısısı ve sirkadiyen ritimler dahil temel işlevleri düzenler."
+    },
+    "5": {
+      "name": "Hipofiz Bezi",
+      "description": "Büyüme, metabolizma ve stres tepkisini etkileyen hormonları üreten ana endokrin bezdir."
+    }
+  },
+  "brainLobsRegionDesc": {
+    "1": {
+      "name": "Korpus Kallozum",
+      "description": "Beynin sağ ve sol yarıkürelerini birbirine bağlayan ve iletişimi sağlayan geniş sinir lifi bandı."
+    },
+    "2": {
+      "name": "Frontal Lob",
+      "description": "Planlama, karar verme, kişilik ifadesi ve motor kontrolü içeren yürütücü işlevlerden sorumlu bölge."
+    },
+    "3": {
+      "name": "Parietal Lob",
+      "description": "Duyusal bilgileri işler, uzamsal farkındalık sağlar ve dikkat ile dil işlevlerinde rol oynar."
+    },
+    "4": {
+      "name": "Temporal Lob",
+      "description": "İşitsel bilgilerin işlenmesi, hafıza oluşumu ve duygu tanıma için önemli bölge."
+    },
+    "5": {
+      "name": "Oksipital Lob",
+      "description": "Beynin görsel işleme merkezi, görsel bilgilerin yorumlanmasından sorumlu."
+    },
+    "6": {
+      "name": "Santral Sulkus",
+      "description": "Motor ve duyusal alanları ayıran, frontal ve parietal lobları birbirinden ayıran önemli oluk."
+    },
+    "7": {
+      "name": "Lateral Sulkus",
+      "description": "Silvian yarığı olarak da bilinen, temporal lobu frontal ve parietal loblardan ayıran oluk."
+    },
+    "8": {
+      "name": "Parieto-Oksipital Sulkus",
+      "description": "Parietal ve oksipital loblar arasındaki sınırı belirleyen oluk."
+    },
+    "9": {
+      "name": "Kallosal Sulkus",
+      "description": "Korpus kallozum boyunca uzanan ve onu singulat girustan ayıran oluk."
+    },
+    "10": {
+      "name": "Singulat Sulkus",
+      "description": "Limbik sistemin bir parçası olan singulat girus boyunca uzanan oluk."
+    }
+  },
+
+  "neuronRegionDesc": {
+    "1": {
+      "name": "Akson Terminali",
+      "description": "Nörotransmitterlerin diğer nöronlarla iletişim kurmak için salındığı akson ucu."
+    },
+    "2": {
+      "name": "Ranvier Boğumu",
+      "description": "Sinir impulslarının sıçramalı iletimini sağlayan miyelin kılıfındaki boşluklar."
+    },
+    "3": {
+      "name": "Schwann Hücresi",
+      "description": "Periferik sinir sisteminde aksonları miyelin kılıfıyla kaplayan hücreler."
+    },
+    "4": {
+      "name": "Miyelin Kılıfı",
+      "description": "Aksonları saran ve sinyal iletimini hızlandıran yalıtkan tabaka."
+    },
+    "5": {
+      "name": "Akson",
+      "description": "Elektriksel impulsları nöron hücre gövdesinden uzağa ileten uzun uzantı."
+    },
+    "6": {
+      "name": "Soma",
+      "description": "Çekirdek ve diğer hayati organelleri içeren nöron hücre gövdesi."
+    },
+    "7": {
+      "name": "Dendritler",
+      "description": "Diğer nöronlardan sinyalleri alan dal benzeri uzantılar."
+    },
+    "8": {
+      "name": "Çekirdek",
+      "description": "Hücrenin genetik materyalini içeren ve hücresel aktiviteleri kontrol eden yapı."
+    }
+  },
+
+  "visualPathwayRegionDesc": {
+    "1": {
+      "name": "Görme Alanı",
+      "description": "Gözler tek bir noktaya odaklandığında görülebilen tüm alan."
+    },
+    "2": {
+      "name": "Retina",
+      "description": "Gözün arkasındaki ışığa duyarlı tabaka, ışığı sinirsel sinyallere dönüştürür."
+    },
+    "3": {
+      "name": "Optik Sinir",
+      "description": "Görsel bilgiyi retinadan beyne taşıyan sinir."
+    },
+    "4": {
+      "name": "Optik Kiazma",
+      "description": "Optik sinirlerin kısmen çaprazlaştığı, her iki gözden gelen görüntülerin entegrasyonunu sağlayan nokta."
+    },
+    "5": {
+      "name": "Optik Trakt",
+      "description": "Görsel bilgiyi optik kiazmadan lateral genikulat çekirdeğe taşıyan sinirsel yol."
+    },
+    "6": {
+      "name": "Lateral Genikulat Çekirdek",
+      "description": "Talamusda bulunan görsel bilgi işleme merkezi."
+    },
+    "7": {
+      "name": "Optik Radyasyon",
+      "description": "Görsel bilgiyi LGN'den görme korteksine taşıyan sinir lifleri."
+    },
+    "8": {
+      "name": "Oksipital Lob",
+      "description": "Birincil görme korteksini içeren ve görsel bilgiyi işleyen beyin lobu."
+    }
+  },
+
+  "cerebralArteriesRegionDesc": {
+    "1": {
+      "name": "Anterior Serebral Arter",
+      "description": "Serebral hemisferlerin frontal ve medial kısımlarına kan sağlar."
+    },
+    "2": {
+      "name": "Orta Serebral Arter",
+      "description": "En büyük serebral arter, frontal, parietal ve temporal lobların lateral alanlarına kan sağlar."
+    },
+    "3": {
+      "name": "Posterior Serebral Arter",
+      "description": "Oksipital lob ve temporal lobun bazı kısımlarına kan sağlar."
+    },
+    "4": {
+      "name": "Willis Poligonu",
+      "description": "Beyne yedek kan dolaşımı sağlayan dairesel arter düzenlemesi."
+    },
+    "5": {
+      "name": "Baziler Arter",
+      "description": "Vertebral arterlerin birleşmesiyle oluşan, beyin sapı ve beynin arka kısımlarına kan sağlayan arter."
+    }
   }
+
 }

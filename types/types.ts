@@ -46,9 +46,9 @@ export type BrainRegionContextType = {
 };
 
 export interface BrainRegionButtonProps {
-  buttonPositions: [number, number, number][];
+  buttonPositions: Record<number, [number, number, number]>;
   num: number;
-  language: Language;
-  setLanguage: (lang: Language) => void;
   onButtonClick: (position: number[], num: number) => void;
+  modelType: string;
+  language: 'en' | 'tr'; // Add this line
 }
