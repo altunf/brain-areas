@@ -49,69 +49,6 @@
     }
   },
 
-  "limbicSystem": {
-    "selectAnnotation": "Bir bölge seçin",
-    "amygdala": "Amigdala",
-    "hippocampus": "Hipokampüs",
-    "anteriorCingulateCortex": "Anterior Singulat Korteks",
-    "hypothalamus": "Hipotalamus",
-    "pituitaryGlad": "Hipofiz Bezi"
-  },
-  "brainLobs": {
-    "selectAnnotation": "Bir bölge seçin",
-    "corpusCallosum": "Korpus Kallozum",
-    "frontalLobe": "Frontal Lob",
-    "parietalLobe": "Parietal Lob",
-    "temporalLobe": "Temporal Lob",
-    "occipitalLobe": "Oksipital Lob",
-    "centralSulcus": "Santral Sulkus",
-    "lateralSulcus": "Lateral Sulkus",
-    "parietoOccipitalSulcus": "Parieto-Oksipital Sulkus",
-    "callosalSulcus": "Kallozal Sulkus",
-    "cingulateSulcus": "Singulat Sulkus"
-  },
-  "neuron": {
-    "selectAnnotation": "Bir bölge seçin",
-    "axonTerminal": "Akson Terminali",
-    "nodeOfRanvier": "Ranvier Boğumu",
-    "schwannCell": "Schwann Hücresi",
-    "myelinSheath": "Miyelin Kılıf",
-    "axon": "Akson",
-    "soma": "Soma",
-    "dendrites": "Dendritler",
-    "nucleus": "Çekirdek"
-  },
-  "visualPathway": {
-    "selectAnnotation": "Bir bölge seçin",
-    "visualField": "Görme Alanı",
-    "retina": "Retina",
-    "opticNerve": "Optik Sinir",
-    "opticChiasma": "Optik Kiazma",
-    "opticTract": "Optik Trakt",
-    "lateralGeniculateNucleus": "Lateral Genikulat Çekirdek",
-    "opticRadiation": "Optik Radyasyon",
-    "occipitalLobe": "Oksipital Lob"
-  },
-  "cerebralArteries": {
-    "selectAnnotation": "Bir bölge seçin",
-    "anteriorCerebralArtery": "Anterior Serebral Arter",
-    "middleCerebralArtery": "Orta Serebral Arter",
-    "posteriorCerebralArtery": "Posterior Serebral Arter",
-    "circleOfWillis": "Willis Halkası",
-    "basilarArtery": "Baziler Arter"
-  },
-
-  "ventricularSystem": {
-    "selectAnnotation": "Bir bölge seçin",
-    "rightLateralVentricle": "Sağ Lateral Ventrikül",
-    "leftLateralVentricle": "Sol Lateral Ventrikül",
-    "3rdVentricle": "3. Ventrikül",
-    "cerebralAqueduct": "Serebral Akuadukt",
-    "4thVentricle": "4. Ventrikül",
-    "centralCanalOfSpinalCord": "Omurilik Merkezi Kanalı",
-    "leftInterventricularForamen": "Sol İnterventriküler Foramen",
-    "rightInterventricularForamen": "Sağ İnterventriküler Foramen"
-  },
   "limbicSystemRegionDesc": {
     "1": {
       "name": "Amigdala",

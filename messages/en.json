@@ -4,11 +4,8 @@
     "description1": "Brainteract is an interactive 3D platform designed to provide a deeper understanding of the brain and nervous system. Through realistic models and detailed explanations, it aims to make theoretical knowledge more accessible by visualizing complex structures. With Brainteract, you can explore brain lobes, neurons, and neural networks in detail, clicking on each region to access relevant scientific information.",
     "description2": "This platform serves as a valuable resource for students, researchers, and anyone interested in neuroscience. By interacting with Brainteract, you can discover how the brain functions, understand how neurons communicate, and closely examine the structure of the nervous system. Our goal is to make neuroscience more accessible by offering an open environment for both learning and exploration.",
     "developer": "Brainteract was developed by psychologist Fırat Altun.",
-    "development": "This project is still under development, so you may encounter some errors. Your feedback is valuable to us!",
-    "switchLanguage": "Türkçeye Geç"
+    "development": "This project is still under development, so you may encounter some errors. Your feedback is valuable to us!"
   },
-
-
 
   "sidebar": {
     "models": {
@@ -51,72 +48,6 @@
     }
   },
 
-
-  "limbicSystem": {
-    "Select an annotation": "Select an annotation",
-    "Amygdala": "Amygdala",
-    "Hippocampus": "Hippocampus",
-    "Anterior Cingulate Cortex": "Anterior Cingulate Cortex",
-    "Hypothalamus": "Hypothalamus",
-    "Pituitary Glad": "Pituitary Gland"
-  },
-  "brainLobs": {
-    "Select an annotation": "Select an annotation",
-    "Corpus Callosum": "Corpus Callosum",
-    "Frontal Lobe": "Frontal Lobe",
-    "Parietal Lobe": "Parietal Lobe",
-    "Temporal Lobe": "Temporal Lobe",
-    "Occipital Lobe": "Occipital Lobe",
-    "Central Sulcus": "Central Sulcus",
-    "Lateral Sulcus": "Lateral Sulcus",
-    "Parieto-Occipital Sulcus": "Parieto-Occipital Sulcus",
-    "Callosal Sulcus": "Callosal Sulcus",
-    "Cingulate Sulcus": "Cingulate Sulcus"
-  },
-
-  "selectAnnotation": "Select an annotation",
-  "neuron": {
-    "Select an annotation": "Select an annotation",
-    "Axon Terminal": "Axon Terminal",
-    "Node of Ranvier": "Node of Ranvier",
-    "Schwann Cell": "Schwann Cell",
-    "Myelin Sheath": "Myelin Sheath",
-    "Axon": "Axon",
-    "Soma": "Soma",
-    "Dendrites": "Dendrites",
-    "Nucleus": "Nucleus"
-  },
-  "visualPathway": {
-    "Select an annotation": "Select an annotation",
-    "Visual Field": "Visual Field",
-    "Retina": "Retina",
-    "Optic Nerve": "Optic Nerve",
-    "Optic Chiasma": "Optic Chiasma",
-    "Optic Tract": "Optic Tract",
-    "Lateral Geniculate Nucleus": "Lateral Geniculate Nucleus",
-    "Optic Radiation": "Optic Radiation",
-    "Occipital Lobe": "Occipital Lobe"
-  },
-  "cerebralArteries": {
-    "Select an annotation": "Select an annotation",
-    "anteriorCerebralArtery": "Anterior Cerebral Artery",
-    "middleCerebralArtery": "Middle Cerebral Artery",
-    "posteriorCerebralArtery": "Posterior Cerebral Artery",
-    "circleOfWillis": "Circle of Willis",
-    "basilarArtery": "Basilar Artery"
-  },
-
-  "ventricularSystem": {
-    "selectAnnotation": "Select a region",
-    "rightLateralVentricle": "Right Lateral Ventricle",
-    "leftLateralVentricle": "Left Lateral Ventricle",
-    "3rdVentricle": "3rd Ventricle",
-    "cerebralAqueduct": "Cerebral Aqueduct",
-    "4thVentricle": "4th Ventricle",
-    "centralCanalOfSpinalCord": "Central Canal of Spinal Cord",
-    "leftInterventricularForamen": "Left Interventricular Foramen",
-    "rightInterventricularForamen": "Right Interventricular Foramen"
-  },
 
   "limbicSystemRegionDesc": {
     "1": {

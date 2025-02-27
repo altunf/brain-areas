@@ -12,12 +12,12 @@ export const getSidebarData = () => {
         icon: Command,
         isActive: true,
       },
-      {
+/*       {
         title: "Documentation",
         url: "#",
         icon: BookOpen,
         isActive: false,
-      },
+      }, */
     ],
     navSecondary: [
       {
