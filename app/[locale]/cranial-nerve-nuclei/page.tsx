@@ -1,7 +1,7 @@
 import ModelViewer from "@/components/model-viewer";
 import {
-  limbicSystemButtonPositions,
-  limbicSystemCameraOffsets,
+  cranialNerveNucleiButtonPositions,
+  cranialNerveNucleiCameraOffsets,
 } from "@/constants/brain-regions";
 
 export default function NerveCrossSectionPage() {
@@ -10,9 +10,9 @@ export default function NerveCrossSectionPage() {
       <ModelViewer
         scale={1}
         modelPath="cranial_nerve_nuclei"
-        buttons={[]}
-        cameraOffsets={limbicSystemCameraOffsets}
-        buttonPositions={limbicSystemButtonPositions}
+        buttons={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+        cameraOffsets={cranialNerveNucleiCameraOffsets}
+        buttonPositions={cranialNerveNucleiButtonPositions}
       />
     </div>
   );

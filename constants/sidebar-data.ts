@@ -59,7 +59,7 @@ export const sidebarData = {
         desc: "Discover the blood supply system of the brain.",
       },
 
-    /*   {
+    {
         href: "/ventricular-system",
         name: "Ventricular System",
         modelType: "ventricularSystem",
@@ -71,18 +71,18 @@ export const sidebarData = {
         modelType: "nerveCrossSection",
         desc: "Examine the internal structure of a nerve.",
       },
-      {
+     /*  {
         href: "/cranial-nerve-nuclei",
         name: "Cranial Nerve Nuclei",
         modelType: "cranialNerveNuclei",
         desc: "Learn about the origins of cranial nerves.",
-      },
+      }, */
       {
         href: "/brodmann-areas",
-        name: "Broadmann Areas",
-        modelType: "brodmannAreas", 
+        name: "Brodmann Areas and Pathologies",
+        modelType: "brodmannAreasAndPathologies", 
         desc: "Explore the functional areas of the cerebral cortex.",
-      }, */
+      }, 
       {
         href: "/phineas-gage",
         name: "Skull of Phineas Gage",

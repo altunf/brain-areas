@@ -61,6 +61,18 @@
     "basilarArtery": "Basilar Artery"
   },
 
+  "ventricularSystem": {
+    "selectAnnotation": "Select a region",
+    "rightLateralVentricle": "Right Lateral Ventricle",
+    "leftLateralVentricle": "Left Lateral Ventricle",
+    "3rdVentricle": "3rd Ventricle",
+    "cerebralAqueduct": "Cerebral Aqueduct",
+    "4thVentricle": "4th Ventricle",
+    "centralCanalOfSpinalCord": "Central Canal of Spinal Cord",
+    "leftInterventricularForamen": "Left Interventricular Foramen",
+    "rightInterventricularForamen": "Right Interventricular Foramen"
+  },
+
   "limbicSystemRegionDesc": {
     "1": {
       "name": "Amygdala",
@@ -217,6 +229,99 @@
     "5": {
       "name": "Basilar Artery",
       "description": "Formed by the union of vertebral arteries, supplies blood to the brainstem and posterior brain."
+    }
+  },
+
+  "ventricularSystemRegionDesc": {
+    "1": {
+      "name": "Right Lateral Ventricle",
+      "description": "One of the two largest ventricles in the brain, located in the right cerebral hemisphere. Contains cerebrospinal fluid and forms part of the ventricular system."
+    },
+    "2": {
+      "name": "Left Lateral Ventricle",
+      "description": "The counterpart to the right lateral ventricle, located in the left cerebral hemisphere. Also contains cerebrospinal fluid and is essential for brain protection."
+    },
+    "3": {
+      "name": "3rd Ventricle",
+      "description": "A narrow cavity in the brain's midline between the two thalami. Acts as a pathway for cerebrospinal fluid and connects the lateral ventricles to the fourth ventricle."
+    },
+    "4": {
+      "name": "Cerebral Aqueduct",
+      "description": "A narrow channel connecting the third and fourth ventricles. Also known as the Aqueduct of Sylvius, it allows cerebrospinal fluid flow between ventricles."
+    },
+    "5": {
+      "name": "4th Ventricle",
+      "description": "A diamond-shaped cavity located between the brainstem and cerebellum. Connects to the central canal and subarachnoid space through specific openings."
+    },
+    "6": {
+      "name": "Central Canal of Spinal Cord",
+      "description": "A small channel running through the center of the spinal cord. Contains cerebrospinal fluid and is continuous with the fourth ventricle."
+    },
+    "7": {
+      "name": "Left Interventricular Foramen",
+      "description": "Also known as the Foramen of Monro on the left side. Connects the left lateral ventricle to the third ventricle."
+    },
+    "8": {
+      "name": "Right Interventricular Foramen",
+      "description": "The right Foramen of Monro, connecting the right lateral ventricle to the third ventricle. Essential for cerebrospinal fluid circulation."
+    }
+  },
+  "brodmannAreasAndPathologiesRegionDesc": {
+    "1": {
+      "name": "Frontal Lobe Lesion",
+      "description": "Damage to the frontal lobe can affect executive functions, personality, behavior, and motor control. Common symptoms include impaired planning, decision-making, and emotional regulation."
+    },
+    "2": {
+      "name": "Frontal Eye Field Lesion",
+      "description": "Lesions in this area can impair voluntary eye movements and visual attention. May cause difficulty in directing gaze to specific targets."
+    },
+    "3": {
+      "name": "PPRF Lesion",
+      "description": "Damage to the Paramedian Pontine Reticular Formation affects horizontal eye movements. Can result in horizontal gaze palsy."
+    },
+    "4": {
+      "name": "Medial Longitudinal Fasciculus Lesions",
+      "description": "Affects coordination between both eyes, particularly in vertical gaze. Can cause internuclear ophthalmoplegia."
+    },
+    "5": {
+      "name": "Dominant Parietal Cortex Lesions",
+      "description": "Can cause problems with language, calculation, and skilled movements. May result in apraxia and agraphia."
+    },
+    "6": {
+      "name": "Nondominant Parietal Cortex Lesions",
+      "description": "Can lead to spatial awareness problems and neglect syndrome. Patients might ignore the left side of their body or environment."
+    },
+    "7": {
+      "name": "Hippocampus Lesions",
+      "description": "Results in difficulties forming new memories and spatial navigation problems. Can cause anterograde amnesia."
+    },
+    "8": {
+      "name": "Basal Ganglia Lesions",
+      "description": "Affects movement control and learning. Can cause movement disorders like chorea, tremors, or Parkinsonism."
+    },
+    "9": {
+      "name": "Mammillary Body Lesions",
+      "description": "Can cause memory problems, particularly in forming new memories. Often associated with Korsakoff syndrome."
+    },
+    "10": {
+      "name": "Amygdala Lesions",
+      "description": "Affects emotional processing and fear responses. Can impair emotional learning and memory."
+    },
+    "11": {
+      "name": "Superior Colliculus Lesions",
+      "description": "Impairs visual orientation and eye movement coordination. Can affect reflexive eye movements."
+    },
+    "12": {
+      "name": "Reticular Activating System (midbrain)",
+      "description": "Damage can affect consciousness and sleep-wake cycles. May cause disorders of consciousness or arousal."
+    },
+    "13": {
+      "name": "Cerebellar Hemisphere Lesions",
+      "description": "Affects coordination and precision of voluntary movements. Can cause ataxia and intention tremor."
+    },
+    "14": {
+      "name": "Cerebellar Vermis Lesions",
+      "description": "Affects balance and trunk stability. Can cause gait ataxia and problems with posture."
     }
   }
 }

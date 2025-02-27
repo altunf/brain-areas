@@ -17,13 +17,13 @@ export function BrainRegionButton({
   const getRegionInfo = () => {
     try {
       const regionKey = `${modelType}RegionDesc.${num}`;
-      console.log("Trying to get translation for:", regionKey);
+    
       return {
         name: t(regionKey + ".name"),
         description: t(regionKey + ".description"),
       };
     } catch (error) {
-      console.error("Translation error:", error);
+    
       return {
         name: `Region ${num}`,
         description: "Description not available",

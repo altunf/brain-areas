@@ -59,7 +59,17 @@
     "basilarArtery": "Baziler Arter"
   },
 
-  
+  "ventricularSystem": {
+    "selectAnnotation": "Bir bölge seçin",
+    "rightLateralVentricle": "Sağ Lateral Ventrikül",
+    "leftLateralVentricle": "Sol Lateral Ventrikül",
+    "3rdVentricle": "3. Ventrikül",
+    "cerebralAqueduct": "Serebral Akuadukt",
+    "4thVentricle": "4. Ventrikül",
+    "centralCanalOfSpinalCord": "Omurilik Merkezi Kanalı",
+    "leftInterventricularForamen": "Sol İnterventriküler Foramen",
+    "rightInterventricularForamen": "Sağ İnterventriküler Foramen"
+  },
   "limbicSystemRegionDesc": {
     "1": {
       "name": "Amigdala",
@@ -216,6 +226,97 @@
       "name": "Baziler Arter",
       "description": "Vertebral arterlerin birleşmesiyle oluşan, beyin sapı ve beynin arka kısımlarına kan sağlayan arter."
     }
+  },
+  "ventricularSystemRegionDesc": {
+    "1": {
+      "name": "Sağ Lateral Ventrikül",
+      "description": "Beynin sağ serebral hemisferinde bulunan iki büyük ventrikülden biri. Beyin omurilik sıvısı içerir ve ventriküler sistemin bir parçasını oluşturur."
+    },
+    "2": {
+      "name": "Sol Lateral Ventrikül",
+      "description": "Sol serebral hemisferde bulunan, sağ lateral ventrikülün karşılığı. Beyin omurilik sıvısı içerir ve beynin korunması için önemlidir."
+    },
+    "3": {
+      "name": "3. Ventrikül",
+      "description": "İki talamus arasında, beynin orta hattında bulunan dar bir boşluk. Beyin omurilik sıvısı için bir yol görevi görür ve lateral ventrikülleri dördüncü ventriküle bağlar."
+    },
+    "4": {
+      "name": "Serebral Akuadukt",
+      "description": "Üçüncü ve dördüncü ventrikülleri birbirine bağlayan dar bir kanal. Sylvius Akuaduktu olarak da bilinir ve ventriküller arası beyin omurilik sıvısı akışını sağlar."
+    },
+    "5": {
+      "name": "4. Ventrikül",
+      "description": "Beyin sapı ve beyincik arasında bulunan elmas şeklinde bir boşluk. Belirli açıklıklar aracılığıyla merkezi kanal ve subaraknoid boşluğa bağlanır."
+    },
+    "6": {
+      "name": "Omurilik Merkezi Kanalı",
+      "description": "Omuriliğin merkezinden geçen küçük bir kanal. Beyin omurilik sıvısı içerir ve dördüncü ventrikül ile devamlılık gösterir."
+    },
+    "7": {
+      "name": "Sol İnterventriküler Foramen",
+      "description": "Sol taraftaki Monro Forameni olarak da bilinir. Sol lateral ventrikülü üçüncü ventriküle bağlar."
+    },
+    "8": {
+      "name": "Sağ İnterventriküler Foramen",
+      "description": "Sağ Monro Forameni, sağ lateral ventrikülü üçüncü ventriküle bağlar. Beyin omurilik sıvısı dolaşımı için önemlidir."
+    }
+  },
+  "brodmannAreasAndPathologiesRegionDesc": {
+    "1": {
+      "name": "Frontal Lob Lezyonu",
+      "description": "Frontal lob hasarı, yürütücü işlevleri, kişiliği, davranışı ve motor kontrolü etkileyebilir. Yaygın belirtiler arasında planlama, karar verme ve duygusal düzenleme bozuklukları yer alır."
+    },
+    "2": {
+      "name": "Frontal Göz Alanı Lezyonu",
+      "description": "Bu bölgedeki lezyonlar istemli göz hareketlerini ve görsel dikkati bozabilir. Belirli hedeflere bakışı yönlendirmede zorluk yaratabilir."
+    },
+    "3": {
+      "name": "PPRF Lezyonu",
+      "description": "Paramedian Pontin Retiküler Formasyon hasarı yatay göz hareketlerini etkiler. Yatay bakış felcine neden olabilir."
+    },
+    "4": {
+      "name": "Medial Longitudinal Fasikulus Lezyonları",
+      "description": "Her iki göz arasındaki koordinasyonu, özellikle dikey bakışı etkiler. İnternükleer oftalmopleji'ye neden olabilir."
+    },
+    "5": {
+      "name": "Dominant Parietal Korteks Lezyonları",
+      "description": "Dil, hesaplama ve becerili hareketlerde sorunlara neden olabilir. Apraksi ve agrafi ile sonuçlanabilir."
+    },
+    "6": {
+      "name": "Nondominant Parietal Korteks Lezyonları",
+      "description": "Uzamsal farkındalık sorunlarına ve ihmal sendromuna yol açabilir. Hastalar vücutlarının veya çevrenin sol tarafını ihmal edebilir."
+    },
+    "7": {
+      "name": "Hipokampus Lezyonları",
+      "description": "Yeni anılar oluşturmada ve uzamsal navigasyonda zorluklara neden olur. Anterograd amneziye yol açabilir."
+    },
+    "8": {
+      "name": "Bazal Ganglion Lezyonları",
+      "description": "Hareket kontrolünü ve öğrenmeyi etkiler. Kore, tremor veya Parkinsonizm gibi hareket bozukluklarına neden olabilir."
+    },
+    "9": {
+      "name": "Mamiller Cisim Lezyonları",
+      "description": "Özellikle yeni anılar oluşturmada hafıza sorunlarına neden olabilir. Genellikle Korsakoff sendromu ile ilişkilidir."
+    },
+    "10": {
+      "name": "Amigdala Lezyonları",
+      "description": "Duygusal işlemlemeyi ve korku tepkilerini etkiler. Duygusal öğrenme ve hafızayı bozabilir."
+    },
+    "11": {
+      "name": "Superior Kollikulus Lezyonları",
+      "description": "Görsel oryantasyon ve göz hareketi koordinasyonunu bozar. Refleksif göz hareketlerini etkileyebilir."
+    },
+    "12": {
+      "name": "Retiküler Aktive Edici Sistem (orta beyin)",
+      "description": "Hasar, bilinç ve uyku-uyanıklık döngülerini etkileyebilir. Bilinç veya uyanıklık bozukluklarına neden olabilir."
+    },
+    "13": {
+      "name": "Serebellar Hemisfer Lezyonları",
+      "description": "İstemli hareketlerin koordinasyonunu ve hassasiyetini etkiler. Ataksi ve intansiyonel tremora neden olabilir."
+    },
+    "14": {
+      "name": "Serebellar Vermis Lezyonları",
+      "description": "Denge ve gövde stabilitesini etkiler. Yürüyüş ataksisi ve postür problemlerine neden olabilir."
+    }
   }
-
 }

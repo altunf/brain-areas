@@ -1,7 +1,7 @@
 import ModelViewer from "@/components/model-viewer";
 import {
-  limbicSystemButtonPositions,
-  limbicSystemCameraOffsets,
+  brodmannAreasButtonPositions,
+  brodmannAreasCameraOffsets,
 } from "@/constants/brain-regions";
 
 export default function BroadmannAreasPage() {
@@ -10,11 +10,10 @@ export default function BroadmannAreasPage() {
       <ModelViewer
       scale={0.5}
         modelPath="brodmann_conceptual_model"
-        buttons={[1, 2, 3, 4, 5]}
-        cameraOffsets={limbicSystemCameraOffsets}
-        buttonPositions={limbicSystemButtonPositions}
+        buttons={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13,14]}
+        cameraOffsets={brodmannAreasCameraOffsets}
+        buttonPositions={brodmannAreasButtonPositions}
       />
-  
     </div>
   );
 }

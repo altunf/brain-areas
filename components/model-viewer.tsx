@@ -29,7 +29,7 @@ export default function ModelViewer({
         scale={scale}
         position={[0, 0, 0]}
       />
-       <directionalLight color={"white"} position={[-1, -1, 1]} intensity={8} />
+     {/*   <directionalLight color={"white"} position={[-1, -1, 1]} intensity={8} /> */}
       <OrbitControls />
     </Canvas>
   );

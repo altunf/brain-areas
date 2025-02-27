@@ -33,6 +33,8 @@ export default function ModelLoader({
         return "cerebralArteries";
       case "ventricular_system":
         return "ventricularSystem";
+        case "brodmann_conceptual_model":
+          return "brodmannAreasAndPathologies";
       default:
         return "limbicSystem";
     }
@@ -55,7 +57,6 @@ export default function ModelLoader({
 
     const regionNames =
       MODEL_REGIONS[currentModelType as keyof typeof MODEL_REGIONS];
-    // Type assertion to allow numeric indexing
     setSelectedRegion(regionNames[num as keyof typeof regionNames] || "");
   };
 
@@ -67,10 +68,11 @@ export default function ModelLoader({
           object={scene}
           scale={scale}
           position={position}
-          /*    onClick={(event: any) => {
+          onClick={(event:any) => {
             event.stopPropagation();
-            onClick?.(event);
-          }} */
+            const point = event.point;
+            console.log(`Click position: [${point.x.toFixed(3)}, ${point.y.toFixed(3)}, ${point.z.toFixed(3)}]`);
+          }}
         />
         {buttons?.map((num) => (
           <BrainRegionButton
