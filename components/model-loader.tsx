@@ -68,11 +68,11 @@ export default function ModelLoader({
           object={scene}
           scale={scale}
           position={position}
-          onClick={(event:any) => {
+/*           onClick={(event:any) => {
             event.stopPropagation();
             const point = event.point;
             console.log(`Click position: [${point.x.toFixed(3)}, ${point.y.toFixed(3)}, ${point.z.toFixed(3)}]`);
-          }}
+          }} */
         />
         {buttons?.map((num) => (
           <BrainRegionButton
