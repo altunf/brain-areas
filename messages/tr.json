@@ -7,6 +7,48 @@
     "development": "Bu proje halen geliştirilmektedir. Bu nedenle bazı hatalarla karşılaşabilirsiniz. Geri bildirimleriniz bizim için değerlidir!",
     "switchLanguage": "Switch to English"
   },
+
+  "sidebar": {
+    "models": {
+      "brainLobs": {
+        "name": "Beyin Lobları",
+        "desc": "Beynin ana loblarını ve işlevlerini keşfedin."
+      },
+      "limbicSystem": {
+        "name": "Limbik Sistem",
+        "desc": "Beynin duygusal ve hafıza merkezini keşfedin."
+      },
+      "neuron": {
+        "name": "Nöron",
+        "desc": "Sinir sisteminin temel birimini öğrenin."
+      },
+      "visualPathway": {
+        "name": "Görme Yolu",
+        "desc": "Görsel bilginin beyinde nasıl işlendiğini anlayın."
+      },
+      "cerebralArteries": {
+        "name": "Serebral Arterler",
+        "desc": "Beynin kan dolaşım sistemini keşfedin."
+      },
+      "ventricularSystem": {
+        "name": "Ventriküler Sistem",
+        "desc": "Beyindeki sıvı dolu boşlukları öğrenin."
+      },
+      "nerveCrossSection": {
+        "name": "Sinir Kesiti",
+        "desc": "Bir sinirin iç yapısını inceleyin."
+      },
+      "brodmannAreasAndPathologies": {
+        "name": "Brodmann Alanları ve Patolojileri",
+        "desc": "Serebral korteksin işlevsel alanlarını keşfedin."
+      },
+      "phineasGage": {
+        "name": "Phineas Gage'in Kafatası",
+        "desc": "Sinirbilimi değiştiren ünlü vakayı inceleyin."
+      }
+    }
+  },
+
   "limbicSystem": {
     "selectAnnotation": "Bir bölge seçin",
     "amygdala": "Amigdala",

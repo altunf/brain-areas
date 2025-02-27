@@ -7,6 +7,51 @@
     "development": "This project is still under development, so you may encounter some errors. Your feedback is valuable to us!",
     "switchLanguage": "Türkçeye Geç"
   },
+
+
+
+  "sidebar": {
+    "models": {
+      "brainLobs": {
+        "name": "Brain Lobs",
+        "desc": "Explore the main lobes of the brain and their functions."
+      },
+      "limbicSystem": {
+        "name": "Limbic System",
+        "desc": "Discover the emotional and memory center of the brain."
+      },
+      "neuron": {
+        "name": "Neuron",
+        "desc": "Learn about the basic unit of the nervous system."
+      },
+      "visualPathway": {
+        "name": "Visual Pathway",
+        "desc": "Understand how visual information travels through the brain."
+      },
+      "cerebralArteries": {
+        "name": "Cerebral Arteries",
+        "desc": "Discover the blood supply system of the brain."
+      },
+      "ventricularSystem": {
+        "name": "Ventricular System",
+        "desc": "Learn about the fluid-filled cavities in the brain."
+      },
+      "nerveCrossSection": {
+        "name": "Nerve Cross Section",
+        "desc": "Examine the internal structure of a nerve."
+      },
+      "brodmannAreasAndPathologies": {
+        "name": "Brodmann Areas and Pathologies",
+        "desc": "Explore the functional areas of the cerebral cortex."
+      },
+      "phineasGage": {
+        "name": "Skull of Phineas Gage",
+        "desc": "Study the famous case that changed neuroscience."
+      }
+    }
+  },
+
+
   "limbicSystem": {
     "Select an annotation": "Select an annotation",
     "Amygdala": "Amygdala",

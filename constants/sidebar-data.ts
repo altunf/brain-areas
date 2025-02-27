@@ -1,6 +1,10 @@
 import { BookOpen, Command, LifeBuoy, Send } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
-export const sidebarData = {
+export const getSidebarData = () => {
+  const t = useTranslations('sidebar.models');
+
+  return {
     navMain: [
       {
         title: "Models",
@@ -30,64 +34,58 @@ export const sidebarData = {
     models: [
       {
         href: "/brain-lobs",
-        name: "Brain Lobs",
+        name: t('brainLobs.name'),
         modelType: "brainLobs",
-        desc: "Explore the main lobes of the brain and their functions.",
+        desc: t('brainLobs.desc'),
       },
       {
-        href: "/limbic-system", 
-        name: "Limbic System",
+        href: "/limbic-system",
+        name: t('limbicSystem.name'),
         modelType: "limbicSystem",
-        desc: "Discover the emotional and memory center of the brain.",
+        desc: t('limbicSystem.desc'),
       },
       {
         href: "/neuron",
-        name: "Neuron", 
+        name: t('neuron.name'),
         modelType: "neuron",
-        desc: "Learn about the basic unit of the nervous system.",
+        desc: t('neuron.desc'),
       },
       {
         href: "/visual-pathway",
-        name: "Visual Pathway",
+        name: t('visualPathway.name'),
         modelType: "visualPathway",
-        desc: "Understand how visual information travels through the brain.",
+        desc: t('visualPathway.desc'),
       },
       {
         href: "/cerebral-arteries",
-        name: "Cerebral Arteries",
+        name: t('cerebralArteries.name'),
         modelType: "cerebralArteries",
-        desc: "Discover the blood supply system of the brain.",
+        desc: t('cerebralArteries.desc'),
       },
-
-    {
+      {
         href: "/ventricular-system",
-        name: "Ventricular System",
+        name: t('ventricularSystem.name'),
         modelType: "ventricularSystem",
-        desc: "Learn about the fluid-filled cavities in the brain.",
+        desc: t('ventricularSystem.desc'),
       },
       {
         href: "/nerve-cross-section",
-        name: "Nerve Cross Section",
+        name: t('nerveCrossSection.name'),
         modelType: "nerveCrossSection",
-        desc: "Examine the internal structure of a nerve.",
+        desc: t('nerveCrossSection.desc'),
       },
-     /*  {
-        href: "/cranial-nerve-nuclei",
-        name: "Cranial Nerve Nuclei",
-        modelType: "cranialNerveNuclei",
-        desc: "Learn about the origins of cranial nerves.",
-      }, */
       {
         href: "/brodmann-areas",
-        name: "Brodmann Areas and Pathologies",
-        modelType: "brodmannAreasAndPathologies", 
-        desc: "Explore the functional areas of the cerebral cortex.",
-      }, 
+        name: t('brodmannAreasAndPathologies.name'),
+        modelType: "brodmannAreasAndPathologies",
+        desc: t('brodmannAreasAndPathologies.desc'),
+      },
       {
         href: "/phineas-gage",
-        name: "Skull of Phineas Gage",
+        name: t('phineasGage.name'),
         modelType: "phineasGage",
-        desc: "Study the famous case that changed neuroscience.",
+        desc: t('phineasGage.desc'),
       },
     ],
   };
+};

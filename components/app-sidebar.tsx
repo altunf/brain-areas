@@ -19,23 +19,35 @@ import {
 import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
 import { NavSecondary } from "./nav-secondary";
-import { sidebarData } from "@/constants/sidebar-data";
+import { getSidebarData } from "@/constants/sidebar-data";
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const router = useRouter();
   const locale = useLocale();
+  const sidebarData = getSidebarData();
+  // Initialize with null to prevent hydration mismatch
+  const [activeItem, setActiveItem] = React.useState<any>(null);
+  const [models, setModels] = React.useState<any[]>([]);
+  const { setOpen } = useSidebar();
+  
+  // Set initial values after component mounts
+  useEffect(() => {
+    setActiveItem(sidebarData.navMain[0]);
+    setModels(sidebarData.models);
+  }, []);
   
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'tr' : 'en';
-    router.push(`/${newLocale}`);  // replace yerine push kullanıyoruz
+    router.push(`/${newLocale}`);
   };
-
-  const [activeItem, setActiveItem] = React.useState(sidebarData.navMain[0]);
-  const [models, setModels] = React.useState(sidebarData.models);
-  const { setOpen } = useSidebar();
-
+  
+  // Add null checks in the render
+  if (!activeItem || !models.length) {
+    return null; // or a loading state
+  }
   return (
     <Sidebar
       collapsible="icon"
