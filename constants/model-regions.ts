@@ -70,5 +70,14 @@ export const MODEL_REGIONS = {
     12:"Reticular Activating System (midbain)",
     13:"Cerebellar Hemisphere Lesions",
     14:"Cerebellar Vermis Lesions",
+  },
+  nerveCrossSection:{
+    1: "Epineurium",
+    2: "Fascicle",
+    3: "Perineurium",
+    4: "Endoneurium",
+    5: "Myelinated Axon",
+    6: "Spinal Nerve",
+    7: "Blood Vessels",
   }
 };

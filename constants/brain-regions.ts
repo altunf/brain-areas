@@ -165,3 +165,24 @@ export const brodmannAreasCameraOffsets = {
   13:  { x: 0.1, y: -0.3, z: -0.7},
   14:  { x: 0.8, y: -0.3, z: -1},
 } as const;
+
+
+export const nerveCrossSectionButtonPositions = {
+  1:  [-0.264, 0.602, -0.081],
+  2:  [0.005, 0.768, -0.189],
+  3: [-0.063, 0.661, -0.181],
+  4: [0.129, 0.872, -0.067],
+  5: [0.129, 0.9, -0.058],
+  6:  [0.143, 0.293, 0.072],
+  7: [0.019, 0.674, -0.070],
+} as const;
+
+export const nerveCrossSectionCameraOffsets = {
+  1: { x: -1, y: 1, z: 0.1 },
+  2: { x: 0, y: 2, z: -0.2 },
+  3: { x: -1, y: 1.2, z: -1 },
+  4: { x:0, y: 0.3, z: -0.2},
+  5: { x:0.1, y: 0.3, z: -0.2},
+  6: { x: 2, y: 0, z: 0.1 },
+  7:  { x: 0, y: 0.3, z: -0.1 },
+} as const;

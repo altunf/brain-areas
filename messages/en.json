@@ -207,7 +207,36 @@
       "description": "Formed by the union of vertebral arteries, supplies blood to the brainstem and posterior brain."
     }
   },
-
+  "nerveCrossSectionRegionDesc": {
+    "1": {
+      "name": "Epineurium",
+      "description": "The outermost layer of connective tissue that surrounds and protects entire nerve bundles."
+    },
+    "2": {
+      "name": "Fascicle",
+      "description": "A bundle of nerve fibers grouped together and surrounded by perineurium."
+    },
+    "3": {
+      "name": "Perineurium",
+      "description": "A protective connective tissue layer that surrounds groups of nerve fibers forming fascicles."
+    },
+    "4": {
+      "name": "Endoneurium",
+      "description": "The innermost layer of connective tissue that surrounds individual nerve fibers."
+    },
+    "5": {
+      "name": "Myelinated Axon",
+      "description": "Nerve fiber covered with myelin sheath for faster signal transmission."
+    },
+    "6": {
+      "name": "Spinal Nerve",
+      "description": "Mixed nerve containing both sensory and motor nerve fibers connecting to the spinal cord."
+    },
+    "7": {
+      "name": "Blood Vessels",
+      "description": "Network of small arteries and veins that supply oxygen and nutrients to the nerve tissue."
+    }
+  },
   "ventricularSystemRegionDesc": {
     "1": {
       "name": "Right Lateral Ventricle",

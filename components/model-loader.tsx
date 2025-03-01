@@ -35,6 +35,8 @@ export default function ModelLoader({
         return "ventricularSystem";
         case "brodmann_conceptual_model":
           return "brodmannAreasAndPathologies";
+          case "nerve_cross_section":
+            return "nerveCrossSection";
       default:
         return "limbicSystem";
     }

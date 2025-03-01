@@ -206,6 +206,36 @@
       "description": "Vertebral arterlerin birleşmesiyle oluşan, beyin sapı ve beynin arka kısımlarına kan sağlayan arter."
     }
   },
+  "nerveCrossSectionRegionDesc": {
+    "1": {
+      "name": "Epinöryum",
+      "description": "Sinir demetlerini çevreleyen ve koruyan en dış bağ dokusu tabakası."
+    },
+    "2": {
+      "name": "Fasikül",
+      "description": "Perinöryum ile çevrili, bir araya gruplanmış sinir lifleri demeti."
+    },
+    "3": {
+      "name": "Perinöryum",
+      "description": "Fasikülleri oluşturan sinir lifi gruplarını çevreleyen koruyucu bağ dokusu tabakası."
+    },
+    "4": {
+      "name": "Endonöryum",
+      "description": "Tek tek sinir liflerini çevreleyen en iç bağ dokusu tabakası."
+    },
+    "5": {
+      "name": "Miyelinli Akson",
+      "description": "Daha hızlı sinyal iletimi için miyelin kılıf ile kaplı sinir lifi."
+    },
+    "6": {
+      "name": "Spinal Sinir",
+      "description": "Omurilikle bağlantılı, hem duyusal hem motor sinir liflerini içeren karışık sinir."
+    },
+    "7": {
+      "name": "Kan Damarları",
+      "description": "Sinir dokusuna oksijen ve besin sağlayan küçük arter ve ven ağı."
+    }
+  },
   "ventricularSystemRegionDesc": {
     "1": {
       "name": "Sağ Lateral Ventrikül",
