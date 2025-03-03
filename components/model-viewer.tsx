@@ -29,7 +29,7 @@ export default function ModelViewer({
         scale={scale}
         position={[0, 0, 0]}
       />
-     {/*   <directionalLight color={"white"} position={[-1, -1, 1]} intensity={8} /> */}
+     {  modelPath == "skull_of_phineas_gage" &&  <directionalLight color={"white"} position={[1, -0.3, -0.4]} intensity={8} /> }
       <OrbitControls />
     </Canvas>
   );
